@@ -1,4 +1,5 @@
 import javax.swing.JFrame;
+import java.awt.Dimension;
 
 public class Window
 {
@@ -8,9 +9,10 @@ public class Window
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(800, 600);
+        frame.setMinimumSize(new Dimension(800, 600));
         frame.setLocation(100, 100);
+        frame.setResizable(true);
         frame.add(new Backdrop());
-        // frame.setLocationRelativeTo(null);
         frame.setAlwaysOnTop(true);
         frame.setVisible(true);
         frame.toFront();
